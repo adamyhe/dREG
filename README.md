@@ -42,7 +42,7 @@ As for how to generate bigWig files from fastq data, please refer to https://git
 Installation instructions: 
 ==========================
 
-dREG will ultimately be availiable in the R repository CRAN to ease installation, and source code will be availiable on GitHub (https://github.com/Danko-Lab/dREG).  
+dREG(https://github.com/Danko-Lab/dREG).  
 
 Supported OS:
 -------------
@@ -61,7 +61,7 @@ This software is already installed on many UNIX systems.  Users can install the 
 
 Users who are not sure how to install the proper dependencies on their system should check with their system administrator for help.  
 
-dREG also has several dependencies within R.  These include **data.table**, **e1071**, **mvtnorm**, **parallel**, **randomForest**, **rmutil**, **rphast**, and **snowfall**.  These packages are all availiable on the CRAN repository.  For convenience, users can install these packages using the makefile:
+dREG also has several dependencies within R.  These include **data.table**, **e1071**, **mvtnorm**, **parallel**, **randomForest**, **rmutil**, **rphast**, and **snowfall**.  These packages are all availiable on the CRAN repository (NOTE: **rphast** has been pulled from CRAN, so we've added a check to install it directly from source).  For convenience, users can install these packages using the makefile:
 
     make R_dependencies
 
@@ -81,15 +81,13 @@ Users should change to the directory containing this README.md file, and can the
 
 Get the dREG models
 -------------------
-Pre-trained model that can be used to predict dREG scores across the genome is availiable here.
+A pre-trained model that can be used to predict dREG scores can be downloaded from the Cornell FTP, or from Zenodo.
 
-(1)  https://dreg.dnasequence.org/themes/dreg/assets/file/asvm.gdm.6.6M.20170828.rdata
+(1) <span style="color:blue"> *ftp://cbsuftp.tc.cornell.edu/danko/hub/dreg.models/asvm.gdm.6.6M.20170828.rdata* </span>
 
 -- OR --
 
-(2) <span style="color:blue"> *ftp://cbsuftp.tc.cornell.edu/danko/hub/dreg.models/asvm.gdm.6.6M.20170828.rdata* </span>
-
-If you are failed to download this model file, please contact us.
+(2) Zenodo archive
 
 Usage instructions:
 ===================
