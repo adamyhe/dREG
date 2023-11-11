@@ -4,13 +4,15 @@ install.packages("mvtnorm", repos = "http://cran.us.r-project.org")
 install.packages("parallel", repos = "http://cran.us.r-project.org")
 install.packages("randomForest", repos = "http://cran.us.r-project.org")
 install.packages("rmutil", repos = "http://cran.us.r-project.org")
-install.packages("rphast", repos = "http://cran.us.r-project.org")
+rphast <- try( install.packages("rphast", repos = "http://cran.us.r-project.org") )
+if ( class( rphast )== "try-error" )
+	devtools::install_github("CshlSiepelLab/RPHAST");
 install.packages("snowfall", repos = "http://cran.us.r-project.org")
 install.packages("devtools", repos = "http://cran.us.r-project.org")
 library(devtools)
 # Here a bug in current devtools 1.12.0 if the installation starts from a sub-folder.
-r <- try( install_github("andrelmartins/bigWig", subdir="bigWig", force=TRUE) )
-if ( class( r )== "try-error" )
+bigwig <- try( install_github("andrelmartins/bigWig", subdir="bigWig", force=TRUE) )
+if ( class( bigwig )== "try-error" )
 	stop("!!!!!Failed to install bigWig from github using install_github method.!!!!\n 
 	You can install manually using the following commands:\n
 	---------------------------------------------------\n
